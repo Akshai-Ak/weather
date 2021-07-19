@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Forecast for {{city}}</h1>
+    <h3>City: {{result.name}}<br><br> 
+        Country: {{result.sys.country}}<br><br> 
+        Date: {{convertToDate(result.dt)|date:'MMM d,y'}}<br><br> 
+        Main Weather: {{result.weather[0].main}}<br><br>
+        Condition : {{result.weather[0].description}}<br><br>
+        Temperature: {{convertTemp(result.main.temp)}}°C<br><br>
+        Feels like: {{convertTemp(result.main.feels_like)}}°C
+    </h3>
+ <!--    <div ng-repeat="w in result.coord">
+        <h3>{{w.name}}</h3>
+    </div> -->
+</body>
+</html>
